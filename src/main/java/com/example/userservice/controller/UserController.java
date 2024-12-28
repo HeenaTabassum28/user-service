@@ -1,10 +1,12 @@
 package com.example.userservice.controller ;
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping(value = "/api/user", produces = MediaType.APPLICATION_JSON_VALUE)
 public class UserController {
-    @GetMapping("/api/user")
+    @GetMapping
     public String getUser() {
         return "Hello World";
     }
